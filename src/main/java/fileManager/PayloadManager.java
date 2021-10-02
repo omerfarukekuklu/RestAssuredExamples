@@ -1,6 +1,6 @@
 package fileManager;
 
-public class payloadManager {
+public class PayloadManager {
     public  static String getAddPlaceBody(){
         return "{\r\n" +
                 "  \"location\": {\r\n" +
@@ -19,5 +19,13 @@ public class payloadManager {
                 "  \"language\": \"French-IN\"\r\n" +
                 "}\r\n" +
                 "";
+    }
+
+    public static String getUpdatePlaceBody(String placeId, String newAddress){
+        return "{\n" +
+                "\"place_id\":\"" + placeId + "\",\n" +
+                "\"address\":\"" + newAddress +"\",\n" +
+                "\"key\":\"qaclick123\"\n" +
+                "}";
     }
 }
