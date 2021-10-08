@@ -19,6 +19,7 @@ public class Basics {
                 .then().assertThat().statusCode(200).body("scope",equalTo("APP"))
                 .header("Server", "Apache/2.4.18 (Ubuntu)").extract().response().asPrettyString();
 
+
         System.out.println(addPlaceResponse);
         JsonPath js = JsonManager.rawToJson(addPlaceResponse);
         String placeId = js.get("place_id");
